@@ -1,4 +1,13 @@
 
+#' Add a new level to a categorical
+#' 
+#' @param x a \code{\link{categorical}}.
+#' @param level a data.frame with the new level(s). This data.frame should
+#'   contain at most one column that matches with the existing levels in
+#'   \code{x}. This level is used to match the new levels to the existing levels
+#'   in \code{x}.
+#'
+#' @export
 add_level <- function(x, level) {
   if (!is.data.frame(level)) stop("level should be a data.frame")
   # one column of level should exist in the categories the remaining not
